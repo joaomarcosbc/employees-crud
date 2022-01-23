@@ -28,7 +28,7 @@ app.listen(3000, () => console.log('Express Server is running at port number 300
 
 
 //Get all employees
-app.get('/employees', (require, response) => {
+app.get('/employees', (request, response) => {
     mysqlConnection.query('SELECT * FROM employee', (err, rows, fields) => {
         if(!err) {
             response.send(rows)
